@@ -1,0 +1,101 @@
+body{
+    background: radial-gradient(50% 50% at 50% 50%, #82118C 0%, rgba(93, 17, 140, 0.93) 100%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color:  #ECD5FF;
+  -webkit-box-shadow: 0 0 0px 1000px #7E138D inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+h1{
+    color: #ECD5FF;
+   
+}
+
+p,h2,h3,h4,h5,h6{
+    color: #D5A1FE;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+
+form{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.search_input{
+   
+    background: #7E138D;
+    border: 1px solid #D5A1FE;
+    box-sizing: border-box;
+    border-radius: 45px;
+    width: auto;
+    padding: 5px 10px;
+    max-width: 50%;
+    height: auto;
+}
+
+.search_btn{
+    background: #7E138D;
+    outline: none;
+    border:none;
+}
+
+.search_btn .fas{
+    color: #D5A1FE;
+}
+
+.search_input #searchField{
+    background: transparent;
+    border-radius: 45px;;
+    outline: none;
+    max-width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+.search_input #searchField:focus, .search_input#searchField:active{
+    outline: none;
+    background: transparent;
+    border:none;
+}
+
+.search_btn:focus, .search_btn:active{
+    outline:none;
+    
+}
+/* media queries screen size 500px */
+
+@media screen and (max-width:500px){
+    main{
+        margin-top: 50%!important; 
+    }
+}

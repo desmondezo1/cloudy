@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <title>Cloudy</title>
+    <link rel="stylesheet" href="/src/css/style.css">
 
-    <script>
-
-    </script>
 
 
 
@@ -19,29 +16,29 @@
 
 
 
-    <form class="new-form" id="myForm">
-        <div id="msg"></div>
-        <input type="text" id="query" name="search">
+    <main>
+        <h1>Cloudy</h1>
+        <p>Get weather updates fast </p>
+        <form action="">
+            <div class="search_input">
+                <input type="tel" name="search" id="searchField">
 
-        <input type="submit" id="sub" value="Search">
+                <button type="submit" class="search_btn">
+                    <i class="fas fa-search"></i>
+                </button>
+
+            </div>
+        </form>
+    </main>
 
 
-    </form>
 
-    <section>
-        <main>
-            <h1>City: <span id="city"></span></h1>
 
-            <ul>
-                <li>Temperture: <span id="temp"></span></li>
-                <li>Weather: <span id="weather"></span></li>
-                <li>Humidity: <span id="humidity"></span></li>
-            </ul>
-        </main>
 
-    </section>
 
-    <!-- <script src="src/js/dexie_db.js"></script> -->
+
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script src="https://kit.fontawesome.com/fb31cef262.js" crossorigin="anonymous"></script>
     <script type="module" src="src/js/main.js"></script>
 </body>
 

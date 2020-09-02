@@ -55,7 +55,11 @@ async function getWeatherData(lat, lon, apiKey, ...more) {
                 // return data;
             }
         ).then(
-            (data_returned) => bulkcreate(db.city_data, data_returned)
+            (data_returned) => {
+                bulkcreate(db.city_data, data_returned);
+                let pulledData = db.city_data.get(city_name);
+                console.log(pulledData);
+            }
         )
         .catch(err => err.message)
 };
