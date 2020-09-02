@@ -1,12 +1,13 @@
 
 export { getLongLat as api_data };
-import { storeData } from './db.js';
-
+import { filterData } from './db.js';
+import { bulkcreate } from './module.js';
+import { db } from './main.js';
 
 
 //Function converts users location to a gets users location as string and returns a lon lat value
 
-function getLongLat(city) {
+async function getLongLat(city) {
 
     const apiKey = 'b3e1ac415747242eee97f3475463b299';
 
@@ -31,7 +32,7 @@ function getLongLat(city) {
 }
 
 //Function gets weather data from api
-function getWeatherData(lat, lon, apiKey, ...more) {
+async function getWeatherData(lat, lon, apiKey, ...more) {
 
     let city_name = more[0];
 
@@ -44,7 +45,17 @@ function getWeatherData(lat, lon, apiKey, ...more) {
     fetch(url_2)
         .then(res => res.json())
         .then(
-            data => { console.log(data); return storeData(data, city_name) }
+            data => {
+                console.log(data);
+
+                data.city = city_name;
+
+                return filterData(data, city_name)
+
+                // return data;
+            }
+        ).then(
+            (data_returned) => bulkcreate(db.city_data, data_returned)
         )
         .catch(err => err.message)
 };

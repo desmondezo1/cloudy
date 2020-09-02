@@ -1,20 +1,24 @@
-//import { openDB, deleteDB } from 'https://unpkg.com/idb?module'
-
-export { storeData as storeData };
-//import { appDB } from './dexie_db.js';
 
 
 
+export { filterData as filterData };
 
-// appDB('weather_db', {
-//     city_data: `city,current,day0,day1,day2,day3,day4,day5,day6,day7,`
-// });
+// import createDB, {
+//     bulkcreate,
+//     // createEle,
+//     // getData,
+//     // SortObj
+// } from "./module.js";
 
-function storeData(data, ...more) {
+import { db } from './main.js';
 
-    console.log(`data_stored form ${more[0]} here is the data ${data}`);
+
+
+async function filterData(data) {
+
+    //console.log(`data_stored form ${more[0]} here is the data ${data}`);
     console.log(data);
-
+    let city_query = data.city;
     //asign data of current day to variables
     let current_humidity = data.current.humidity,
         current_pressure = data.current.pressure,
@@ -65,6 +69,7 @@ function storeData(data, ...more) {
         day7_weather = data.daily[7].weather[0].main;
 
     let weather_obj = {
+        'city': city_query,
         'current': {
             'humidity': current_humidity,
             'temp': current_temperature,
@@ -125,37 +130,14 @@ function storeData(data, ...more) {
     };
 
 
-    if (more[0] !== undefined) {
-        weather_obj.city = more[0]
-    };
+
+    console.log(weather_obj);
+    console.log('db below');
+
+    return weather_obj;
 
 
-    return putData(weather_obj, weather_obj.city);
-
-
-
-}
-
-function putData(weather_obj, ...more) {
-
-
-    db.city_data.put(weather_obj).then(function () {
-        //
-        // Then when data is stored, read from it
-        //
-        return db.city_data.get(more[0]);
-    }).then(function (city_data) {
-        //
-        // Display the result
-        //
-        alert("Nicolas has shoe size " + city_data.current);
-    }).catch(function (error) {
-        //
-        // Finally don't forget to catch any error
-        // that could have happened anywhere in the
-        // code blocks above.
-        //
-        alert("Ooops: " + error);
-    });
 
 }
+
+
