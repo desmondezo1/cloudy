@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Varela+Round&display=swap');
+
+body,html{
+    margin: 0;
+    padding: 0;
+}
+
+
 body{
     background: radial-gradient(50% 50% at 50% 50%, #82118C 0%, rgba(93, 17, 140, 0.93) 100%);
     background-repeat: no-repeat;
@@ -25,15 +33,17 @@ select:-webkit-autofill:focus {
 
 h1{
     color: #ECD5FF;
+    font-family: 'Varela Round', sans-serif;
    
 }
 
-p,h2,h3,h4,h5,h6{
+p,h2,h3,h4,h5,h6,li{
     color: #D5A1FE;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
-main{
+.search_section{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -54,12 +64,14 @@ form{
 .search_input{
    
     background: #7E138D;
+    display: flex;
     border: 1px solid #D5A1FE;
     box-sizing: border-box;
     border-radius: 45px;
-    width: auto;
+    min-width: 300px;
     padding: 5px 10px;
     max-width: 50%;
+    width: 100%;
     height: auto;
 }
 
@@ -78,14 +90,21 @@ form{
     border-radius: 45px;;
     outline: none;
     max-width: 100%;
+    width: 100%;
     padding: 10px;
     border: none;
+    color: #D5A1FE;
 }
+.search_input #searchField::placeholder{
+    color: #D5A1FE;   
+}
+
 
 .search_input #searchField:focus, .search_input#searchField:active{
     outline: none;
     background: transparent;
     border:none;
+    color: #D5A1FE;
 }
 
 .search_btn:focus, .search_btn:active{
@@ -95,7 +114,12 @@ form{
 /* media queries screen size 500px */
 
 @media screen and (max-width:500px){
-    main{
+    body{
+        height: 100vh;
+        overflow: auto;
+
+    }
+    .search_section{
         margin-top: 50%!important; 
     }
 }

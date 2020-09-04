@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ECD5FF">
     <title>Cloudy</title>
-    <link rel="stylesheet" href="/src/css/style.css">
+    <!-- <link rel="stylesheet" href="/src/css/style.css"> -->
 
 
 
@@ -16,19 +17,25 @@
 
 
 
-    <main>
-        <h1>Cloudy</h1>
-        <p>Get weather updates fast </p>
-        <form action="">
-            <div class="search_input">
-                <input type="tel" name="search" id="searchField">
+    <main id="app">
 
-                <button type="submit" class="search_btn">
-                    <i class="fas fa-search"></i>
-                </button>
+        <!-- section displaying search bar -->
+        <!-- <section class="search_section">
+            <h1>Cloudy</h1>
+            <p>Get weather updates fast </p>
+            <form id="myForm" action="">
+                <div class="search_input">
+                    <input type="search" name="search" results=5 placeholder=Search... id="searchField">
 
-            </div>
-        </form>
+                    <button type="submit" class="search_btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                </div>
+            </form>
+        </section> -->
+
+
     </main>
 
 
@@ -37,8 +44,9 @@
 
 
 
-    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="https://kit.fontawesome.com/fb31cef262.js" crossorigin="anonymous"></script>
+    <script async src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script async src="https://kit.fontawesome.com/fb31cef262.js" crossorigin="anonymous"></script>
+    <script type="module" src="./src/js/routes.js"></script>
     <script type="module" src="src/js/main.js"></script>
 </body>
 

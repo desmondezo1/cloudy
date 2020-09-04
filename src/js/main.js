@@ -20,7 +20,7 @@ const myForm = document.getElementById('myForm');
 
 myForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    let city_val = document.getElementById('query').value;
+    let city_val = document.getElementById('searchField').value;
 
     api_data(city_val);
 

@@ -1,0 +1,126 @@
+main{
+    height: 100%;
+}
+
+.display-result{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: [line1] 40% [line2] 20% [line3] 40% [line4];
+    grid-template-rows: [row-l1] auto [row-l2] 5% [row-l3] auto [row-l4];
+    /* grid-template-areas: 
+    "decription . icon-img"
+    "list-name . detail-list"; */
+    /* margin: 0; */
+}
+.description{
+
+text-align: initial;
+/* grid-area: description; */
+grid-column-start: line1;
+grid-column-end: line2;
+grid-row-start: row-l1;
+grid-row-end: row-l2;
+}
+
+.description p{
+    color: #BF6AFF;
+}
+.icon-img{
+/* grid-area: icon-img; */
+grid-column-start: line3;
+grid-column-end: line4;
+grid-row-start: row-l1;
+grid-row-end: row-l2;
+}
+
+.list-name{
+/* grid-area: list-name;  */
+grid-column-start: line1;
+grid-column-end: line2;
+grid-row-start: row-l3;
+grid-row-end: row-l4;
+}
+
+.list-name .detail-titles{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: initial;
+}
+
+.detail-titles li{
+    padding-top: 5px;
+}
+.detail-list{
+/* grid-area: detail-list; */
+grid-column-start: line3;
+grid-column-end: line4;
+grid-row-start: row-l3;
+grid-row-end: row-l4;
+}
+
+.detail-list .weather-details{
+    padding-right:10px ;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+}
+
+.weather-details{
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+
+@media screen and (max-width: 500px){
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+h1{
+    font-size: 35px;
+}
+
+p,li{
+    font-size: 20px;
+}
+.description, .detail-list, .detail-titles, .icon-img{
+    padding-top: 35px;
+}
+.display-result{
+    height: 100%;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+
+}
+
+.card{
+  
+    /* width: 100%!important; */
+    height: 80vh;
+    padding: 20px;
+    background:#2B004C;
+    border-radius: 15px;
+
+
+
+}
+.weather-icon{
+    height: 100px;
+}
+
+.detail-list{
+    padding-top: 21px;
+}
+
+}

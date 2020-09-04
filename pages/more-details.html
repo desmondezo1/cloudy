@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ECD5FF">
+    <title>More Details</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/results.css">
+    <link rel="stylesheet" href="/src/css/moredtails.css">
+
+</head>
+
+<body>
+
+
+    <main>
+        <h3 class="city-name"><i class="fas fa-map-marker-alt location-icon"></i> Port Harcourt </h3>
+        <section id="wrapper" class="display-result">
+            <div class="card">
+
+                <div class="description">
+                    <p>It's
+                    <h1>Rainy</h1>
+                    <p>outside</p>
+                </div>
+                <div class="icon-img">
+                    <img class="weather-icon" src=" http://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
+                </div>
+                <div class="list-name">
+                    <ul class="detail-titles">
+                        <li>Temperature</li>
+                        <li>Visibility</li>
+                        <li>Humidity</li>
+                        <li>wind speed</li>
+                    </ul>
+                </div>
+                <div class="detail-list">
+                    <ul class="weather-details">
+                        <li>24</li>
+                        <li>Low</li>
+                        <li>35%</li>
+                        <li>0.1km/h</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+    <script>
+
+        function windowWidthChange(mq) {
+            if (mq.matches) {
+                let name = document.getElementById("wrapper");
+                console.log('small');
+                name.classList.remove("display-result");
+            } else {
+                let name = document.getElementById("wrapper");
+                name.classList.add("display-result");
+                console.log('larger');
+            }
+        }
+
+        const $small = '(max-width: 500px)';
+        const mq = window.matchMedia($small);
+        mq.addListener(windowWidthChange);
+
+    </script>
+    <script src="https://kit.fontawesome.com/fb31cef262.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
