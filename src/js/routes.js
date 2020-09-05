@@ -1,6 +1,10 @@
 import home from "./views/home.js";
 import Results from "./views/results.js";
 import MoreInfo from "./views/more-info.js";
+import currentDay from "./display-data.js";
+// export { router as router };
+export { navigateTo as navigateTo };
+export { router as router };
 
 
 
@@ -15,9 +19,13 @@ const getParams = match => {
     }));
 };
 
+//Navigate to
 const navigateTo = url => {
     history.pushState(null, null, url);
+
+    console.log(`navigated to ${url}`);
     router();
+
 };
 
 const router = async () => {
@@ -28,7 +36,7 @@ const router = async () => {
         { path: "/more-info", view: MoreInfo }
     ];
 
-    // Test each route for potential match
+    // Testing each route for potential match
     const potentialMatches = routes.map(route => {
         return {
             route: route,
@@ -48,17 +56,41 @@ const router = async () => {
     const view = new match.route.view(getParams(match));
 
     document.querySelector("#app").innerHTML = await view.getHtml();
+
+    function updatePage() {
+
+        console('time loop');
+        let res = '/results';
+
+        let page = location.pathname.match(res);
+
+        if (page !== null) {
+            currentDay();
+            //ran = true;
+        }
+    }
+
+    (() => { setTimeout(updatePage, 100) });
+
+    // let res = '/results';
+
+    // let page = location.pathname.match(res);
+
+    // if (page !== null) {
+    //     currentDay();
+    // }
+
 };
 
-window.addEventListener("popstate", router);
+// window.addEventListener("popstate", router);
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.body.addEventListener("click", e => {
-        if (e.target.matches("[data-link]")) {
-            e.preventDefault();
-            navigateTo(e.target.href);
-        }
-    });
+// document.addEventListener("DOMContentLoaded", () => {
+//     document.body.addEventListener("click", e => {
+//         if (e.target.matches("[data-link]")) {
+//             e.preventDefault();
+//             navigateTo(e.target.href);
+//         }
+//     });
 
-    router();
-});
+//     router();
+// });

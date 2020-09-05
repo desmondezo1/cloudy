@@ -17,7 +17,7 @@ export default class extends AbstractView {
         <section class="search_section">
             <h1>Cloudy</h1>
             <p>Get weather updates fast </p>
-            <form id="myForm" action="">
+            <form id="myForm" name="myForn" >
                 <div class="search_input">
                     <input type="search" name="search" results=5 placeholder=Search... id="searchField">
 

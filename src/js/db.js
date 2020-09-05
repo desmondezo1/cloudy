@@ -2,19 +2,33 @@
 
 
 export { filterData as filterData };
+export { storeData as storeData };
 
-// import createDB, {
-//     bulkcreate,
-//     // createEle,
-//     // getData,
-//     // SortObj
-// } from "./module.js";
+function storeData(data) {
+    let stored;
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem('user', JSON.stringify(data));
+        stored = true;
+        console.log('stored inside');
 
-import { db } from './main.js';
+    } else {
+        console.log('get yourself an updated browser!!')
+        stored = false;
+    }
+
+}
 
 
+function getData(data) {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem('user', JSON.stringify(data));
 
-async function filterData(data) {
+    } else {
+        console.log('get yourself an updated browser!!')
+    }
+}
+
+function filterData(data) {
 
     //console.log(`data_stored form ${more[0]} here is the data ${data}`);
     console.log(data);
@@ -66,7 +80,40 @@ async function filterData(data) {
         day4_weather = data.daily[4].weather[0].main,
         day5_weather = data.daily[5].weather[0].main,
         day6_weather = data.daily[6].weather[0].main,
-        day7_weather = data.daily[7].weather[0].main;
+        day7_weather = data.daily[7].weather[0].main,
+
+        //asign daily main weather for 8days
+        day0_weather_icon = data.daily[0].weather[0].icon,
+        day1_weather_icon = data.daily[1].weather[0].icon,
+        day2_weather_icon = data.daily[2].weather[0].icon,
+        day3_weather_icon = data.daily[3].weather[0].icon,
+        day4_weather_icon = data.daily[4].weather[0].icon,
+        day5_weather_icon = data.daily[5].weather[0].icon,
+        day6_weather_icon = data.daily[6].weather[0].icon,
+        day7_weather_icon = data.daily[7].weather[0].icon,
+
+
+        //asign daily max-temp weather for 8days
+        day0_max_temp = data.daily[0].temp.max,
+        day1_max_temp = data.daily[1].temp.max,
+        day2_max_temp = data.daily[2].temp.max,
+        day3_max_temp = data.daily[3].temp.max,
+        day4_max_temp = data.daily[4].temp.max,
+        day5_max_temp = data.daily[5].temp.max,
+        day6_max_temp = data.daily[6].temp.max,
+        day7_max_temp = data.daily[7].temp.max,
+
+
+
+        //asign daily main weather for 8days
+        day0_weather_description = data.daily[0].weather[0].description,
+        day1_weather_description = data.daily[1].weather[0].description,
+        day2_weather_description = data.daily[2].weather[0].description,
+        day3_weather_description = data.daily[3].weather[0].description,
+        day4_weather_description = data.daily[4].weather[0].description,
+        day5_weather_description = data.daily[5].weather[0].description,
+        day6_weather_description = data.daily[6].weather[0].description,
+        day7_weather_description = data.daily[7].weather[0].description;
 
     let weather_obj = {
         'city': city_query,
@@ -83,56 +130,72 @@ async function filterData(data) {
             'morn_temp': day0_mornTemp,
             'aft_temp': day0_aftTemp,
             'eve_temp': day0_eveTemp,
-            'weather': day0_weather
+            'weather': day0_weather,
+            'weather_icon': day0_weather_icon,
+            'weather_description': day0_weather_description
         },
         'day1': {
             'morn_temp': day1_mornTemp,
             'aft_temp': day1_aftTemp,
             'eve_temp': day1_eveTemp,
-            'weather': day1_weather
+            'weather': day1_weather,
+            'weather_icon': day1_weather_icon,
+            'weather_description': day1_weather_description
         },
         'day2': {
             'morn_temp': day2_mornTemp,
             'aft_temp': day2_aftTemp,
             'eve_temp': day2_eveTemp,
-            'weather': day2_weather
+            'weather': day2_weather,
+            'weather_icon': day2_weather_icon,
+            'weather_description': day2_weather_description
         },
         'day3': {
             'morn_temp': day3_mornTemp,
             'aft_temp': day3_aftTemp,
             'eve_temp': day3_eveTemp,
-            'weather': day3_weather
+            'weather': day3_weather,
+            'weather_icon': day3_weather_icon,
+            'weather_description': day3_weather_description
         },
         'day4': {
             'morn_temp': day4_mornTemp,
             'aft_temp': day4_aftTemp,
             'eve_temp': day4_eveTemp,
-            'weather': day4_weather
+            'weather': day4_weather,
+            'weather_icon': day4_weather_icon,
+            'weather_description': day4_weather_description
         },
         'day5': {
             'morn_temp': day5_mornTemp,
             'aft_temp': day5_aftTemp,
             'eve_temp': day5_eveTemp,
-            'weather': day5_weather
+            'weather': day5_weather,
+            'weather_icon': day5_weather_icon,
+            'weather_description': day5_weather_description
         },
         'day6': {
             'morn_temp': day6_mornTemp,
             'aft_temp': day6_aftTemp,
             'eve_temp': day6_eveTemp,
-            'weather': day6_weather
+            'weather': day6_weather,
+            'weather_icon': day6_weather_icon,
+            'weather_description': day6_weather_description
         },
         'day7': {
             'morn_temp': day7_mornTemp,
             'aft_temp': day7_aftTemp,
             'eve_temp': day7_eveTemp,
-            'weather': day7_weather
+            'weather': day7_weather,
+            'weather_icon': day7_weather_icon,
+            'weather_description': day7_weather_description
         }
     };
 
 
 
     console.log(weather_obj);
-    console.log('db below');
+
 
     return weather_obj;
 

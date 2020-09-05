@@ -1,8 +1,13 @@
 
 export { getLongLat as api_data };
 import { filterData } from './db.js';
-import { bulkcreate } from './module.js';
-import { db } from './main.js';
+import { storeData } from './db.js';
+import { navigateTo, router } from './routes.js';
+import showResults from './display-data.js';
+import displayData_currentDay from './display-data.js';
+//import { router } from './routes.js;'
+//import { currentDay, day1, day2, day3, day4, day5, day6, day7 } from './display-data.js';
+
 
 
 //Function converts users location to a gets users location as string and returns a lon lat value
@@ -47,19 +52,31 @@ async function getWeatherData(lat, lon, apiKey, ...more) {
         .then(
             data => {
                 console.log(data);
-
+                localStorage.clear();
+                localStorage.removeItem('user');
+                console.log('data cleared');
                 data.city = city_name;
 
+                //showResults(data);
                 return filterData(data, city_name)
 
                 // return data;
             }
         ).then(
-            (data_returned) => {
-                bulkcreate(db.city_data, data_returned);
-                let pulledData = db.city_data.get(city_name);
-                console.log(pulledData);
+            data_returned => {
+                storeData(data_returned);
+                console.log('data stored!');
+                //showResults(data_returned, navigateTo("/results"));
+                router();
+                navigateTo("/results");
             }
-        )
+        ).then(() => {
+            console.log('end of chain');
+            displayData_currentDay();
+
+
+
+
+        })
         .catch(err => err.message)
 };
