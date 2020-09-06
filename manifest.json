@@ -1,0 +1,21 @@
+{
+    "name": "Cloudy",
+    "description": "Weather forecast information",
+    "short_name": "Cloudy",
+    "icons": [
+        {
+            "src": "./favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./favicon/apple-touch-icon-180x180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ECD5FF",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "."
+}

@@ -7,8 +7,9 @@ export default class extends AbstractView {
         super(params);
 
         this.setTitle("Home");
+        // this.listen(this.removeTag("./src/css/style.css"));
 
-        this.createLink("./src/css/style.css");;
+        // this.createLink("./src/css/style.css");;
     }
 
     async getHtml() {
@@ -17,6 +18,7 @@ export default class extends AbstractView {
         <section class="search_section">
             <h1>Cloudy</h1>
             <p>Get weather updates fast </p>
+            <div class="err-msg" id="errorMsg"></div>
             <form id="myForm" name="myForn" >
                 <div class="search_input">
                     <input type="search" name="search" results=5 placeholder=Search... id="searchField">
@@ -29,10 +31,6 @@ export default class extends AbstractView {
             </form>
         </section>
 
-        <!-- section diplaying search results -->
-        <section class="display_results_section">
-
-        </section>
         `;
     }
 }

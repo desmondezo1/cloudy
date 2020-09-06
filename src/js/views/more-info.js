@@ -8,8 +8,12 @@ export default class extends AbstractView {
 
         this.setTitle("more-info");
 
-        this.createLink("./src/css/style.css");
-        this.createLink("./src/css/results.css");
+        // this.listen(this.removeTag("./src/css/style.css"));
+        // this.listen(this.removeTag("./src/css/results.css"));
+        // this.listen(this.removeTag("./src/css/moredtails.css"));
+
+        // this.createLink("./src/css/style.css");
+        // this.createLink("./src/css/results.css");
         this.createLink("./src/css/moredtails.css");
 
 

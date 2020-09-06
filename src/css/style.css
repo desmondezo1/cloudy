@@ -30,6 +30,30 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.err-msg{
+   
+    width: auto;
+    padding: 5px 15px;
+    height: 20px;
+    background:#FFCCCC;
+    margin: 10px;
+    border-radius: 10px;
+    color: #DB0202;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #DB0202;
+}
+
+.err-msg:empty{
+    display: none;
+}
+
+.err-msg a{
+    padding: 5px;
+    border-radius: 5px;
+    background: #db3456;
+    color: #ffcccc;
+}
 
 h1{
     color: #ECD5FF;
@@ -37,7 +61,7 @@ h1{
    
 }
 
-p,h2,h3,h4,h5,h6,li{
+p,h2,h3,h4,h5,h6,li, body{
     color: #D5A1FE;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -120,6 +144,6 @@ form{
 
     }
     .search_section{
-        margin-top: 50%!important; 
+        /*margin-top: 50%!important; */
     }
 }

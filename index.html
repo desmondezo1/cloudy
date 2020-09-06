@@ -5,8 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#ECD5FF">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+
+
     <title>Cloudy</title>
-    <!-- <link rel="stylesheet" href="/src/css/style.css"> -->
+    <link rel="stylesheet" href="/src/css/style.css">
 
 
 
@@ -19,21 +28,7 @@
 
     <main id="app">
 
-        <!-- section displaying search bar -->
-        <!-- <section class="search_section">
-            <h1>Cloudy</h1>
-            <p>Get weather updates fast </p>
-            <form id="myForm" action="">
-                <div class="search_input">
-                    <input type="search" name="search" results=5 placeholder=Search... id="searchField">
 
-                    <button type="submit" class="search_btn">
-                        <i class="fas fa-search"></i>
-                    </button>
-
-                </div>
-            </form>
-        </section> -->
 
 
     </main>
@@ -43,11 +38,13 @@
 
 
 
-
+    <script type="module" src="./pwabuilder-sw-register.js"></script>
     <!-- <script async src="https://unpkg.com/dexie@latest/dist/dexie.js"></script> -->
     <script async src="https://kit.fontawesome.com/fb31cef262.js" crossorigin="anonymous"></script>
     <!-- <script type="module" src="/src/js/routes.js"></script> -->
     <script type="module" src="src/js/main.js"></script>
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script>
     <!-- <script src="/src/js/display-data.js"></script> -->
 </body>
 

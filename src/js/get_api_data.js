@@ -32,7 +32,9 @@ async function getLongLat(city) {
                 return getWeatherData(lat, lon, apiKey, city_name);
             }
         ).catch(
-            err => err.message
+            err => {
+                document.getElementById("errorMsg").innerHTML = `${err.message} <a onClick='document.getElementById("errorMsg").style.display ="none"'> x </a>`;
+            }
         )
 }
 
@@ -78,5 +80,7 @@ async function getWeatherData(lat, lon, apiKey, ...more) {
 
 
         })
-        .catch(err => err.message)
+        .catch(err => {
+            document.getElementById("errorMsg").innerHTML = `${err.message} <a onClick='document.getElementById("errorMsg").style.display ="none"'> x </a>`;
+        })
 };

@@ -11,7 +11,20 @@ export default class {
     }
 
 
+    removeTag(url) {
+        let tag = document.querySelector(`link[href="${url}"]`);
+        if (tag !== null) {
+            tag.remove();
+        }
+    }
+
+    listen(func) {
+        window.addEventListener("popstate", func);
+    }
+
     createLink(url) {
+
+
         var link = document.createElement('link');
         link.rel = "stylesheet";
         link.type = "text/css";

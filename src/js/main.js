@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
             myForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 let city_val = document.getElementById('searchField').value;
-                loaded = true;
+                loaded = false;
                 api_data(city_val);
 
 
@@ -55,8 +55,22 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
+
+    console.log(loaded);
 })();
 
+
+// if ("serviceWorker" in navigator) {
+//     navigator.serviceWorker.register("../../sw.js").then(registration => {
+//         console.log("sw registered");
+//         console.log(registration);
+//     }).catch(
+//         error => {
+//             console.log("reg of service worker failed");
+//             console.log(error);
+//         }
+//     );
+// }
 
 // function updatePage() {
 

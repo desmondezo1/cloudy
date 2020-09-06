@@ -57,20 +57,20 @@ const router = async () => {
 
     document.querySelector("#app").innerHTML = await view.getHtml();
 
-    function updatePage() {
+    // function updatePage() {
 
-        console('time loop');
-        let res = '/results';
+    //     console('time loop');
+    //     let res = '/results';
 
-        let page = location.pathname.match(res);
+    //     let page = location.pathname.match(res);
 
-        if (page !== null) {
-            currentDay();
-            //ran = true;
-        }
-    }
+    //     if (page !== null) {
+    //         currentDay();
+    //         //ran = true;
+    //     }
+    // }
 
-    (() => { setTimeout(updatePage, 100) });
+    //(() => { setTimeout(updatePage, 100) });
 
     // let res = '/results';
 
