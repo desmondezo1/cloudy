@@ -15,49 +15,78 @@ document.addEventListener("DOMContentLoaded", () => {
     router();
 });
 
-(() => {
-    let loaded = false;
-    document.addEventListener('DOMContentLoaded', function () {
+// document.onreadystatechange = () => {
+//     if (document.readyState === 'complete') {
+//         // document ready
 
+//         console.log("ready state");
+//     }
+// };
 
-        const myForm = document.getElementById('myForm');
-        if (myForm !== null) { listenToForm(); }
+let test = document.addEventListener('input', function () {
+    const myForm = document.getElementById('myForm');
 
-
-        function listenToForm() {
-            myForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                let city_val = document.getElementById('searchField').value;
-                loaded = true;
-                api_data(city_val);
-
-
-
-            });
-        }
-
-    });
-
-    if (loaded = true) {
-        const myForm = document.getElementById('myForm');
-        if (myForm !== null) { listenToForm(); }
-
-
-        function listenToForm() {
-            myForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                let city_val = document.getElementById('searchField').value;
-                loaded = false;
-                api_data(city_val);
+    function listenToForm() {
+        myForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let city_val = document.getElementById('searchField').value;
+            // loaded = true;
+            api_data(city_val);
 
 
 
-            });
-        }
+        });
     }
 
-    console.log(loaded);
-})();
+    if (myForm !== null) { listenToForm(); }
+
+});
+
+//test();
+
+    // (() => {
+    //     let loaded = false;
+    //     document.addEventListener('DOMContentLoaded', function () {
+
+
+    //         const myForm = document.getElementById('myForm');
+    //         if (myForm !== null) { listenToForm(); }
+
+
+    //         function listenToForm() {
+    //             myForm.addEventListener('submit', (e) => {
+    //                 e.preventDefault();
+    //                 let city_val = document.getElementById('searchField').value;
+    //                 loaded = true;
+    //                 api_data(city_val);
+
+
+
+    //             });
+    //         }
+
+    //     });
+
+    //     if (loaded == true) {
+    //         const myForm = document.getElementById('myForm');
+    //         if (myForm !== null) { listenToForm(); }
+
+
+    //         function listenToForm() {
+    //             myForm.addEventListener('submit', (e) => {
+    //                 e.preventDefault();
+    //                 let city_val = document.getElementById('searchField').value;
+    //                 loaded = false;
+    //                 api_data(city_val);
+
+
+
+    //             });
+    //         }
+    //     }
+
+    //     console.log(loaded);
+    // })();
 
 
 // if ("serviceWorker" in navigator) {

@@ -13,6 +13,7 @@ export default class extends AbstractView {
         // this.createLink("./src/css/style.css");
         this.createLink("./src/css/results.css");
         this.name(this.displayData_currentDay);
+        this.name(this.showDays);
 
 
     }
