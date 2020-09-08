@@ -1,10 +1,60 @@
 import { api_data } from './get_api_data.js';
-import { router } from './routes.js';
+
+import { navigateTo, router } from './routes.js';
+import currentDay from "./display-data.js";
+
+
 
 
 window.addEventListener("popstate", router);
 
+// let card = document.getElementById('day0');
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     stateChange(card);
+// });
+
+// function stateChange(div) {
+//     setTimeout(function () {
+
+
+//         if (div !== null) {
+//             console.log("ran don run");
+//             currentDay();
+//         }
+
+
+//     }, 500);
+// }
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     let res = '/results';
+//     let page = location.pathname.match(res)
+//     if (page !== null) {
+//         currentDay();
+//     }
+// });
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
+    function showSpinner(spinner) {
+        spinner.className = "show";
+        setTimeout(() => {
+            spinner.className = spinner.className.replace("show", "");
+        }, 5000);
+    }
+
+
+    const spinner = document.getElementById("spinner");
+
+
     document.body.addEventListener("click", e => {
         if (e.target.matches("[data-link]")) {
             e.preventDefault();
@@ -12,8 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    showSpinner(spinner);
     router();
 });
+
+
 
 // document.onreadystatechange = () => {
 //     if (document.readyState === 'complete') {
@@ -23,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //     }
 // };
 
-let test = document.addEventListener('input', function () {
+document.addEventListener('input', function () {
     const myForm = document.getElementById('myForm');
 
     function listenToForm() {

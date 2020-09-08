@@ -6,6 +6,10 @@
 .city-name .fas{
     color: #2B004C;
 }
+.city-name a{
+    text-decoration: none;
+    color: #D5A1FE;
+}
 
 h1{
     margin: 0;
@@ -15,18 +19,28 @@ h1{
     padding-top: 20px;
     margin-left: 20px;
 }
+.display-result{
+    display: flex;
+    margin: 0 15px;
+    overflow: auto;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 
 .display-result .card{
-    background:#2B004C;
+    background: #2B004C;
     width: 342px;
     max-width: 250px;
     min-width: 250px;
     padding: 20px;
     align-items: center;
     text-align: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: 0 15px;
     border-radius: 15px;
-    /* max-height: 300px ; */
+    /* max-height: 300px; */
     min-height: 250px;
 }
 .scroll-select{
@@ -100,7 +114,14 @@ float: right;
 }
 
 /* media queries screen size 500px */
+@media screen and (min-width: 600px){
 
+    .display-result{
+        /* justify-content: center; */
+        margin: 0 20%;
+       }
+
+}
 @media screen and (max-width:500px){
     .search_section{
         /* margin-top: 10%!important;  */
@@ -110,6 +131,8 @@ float: right;
     .card{
         margin: 10px auto;
     }
+
+
 }
 
 @media screen and (min-height: 600px){

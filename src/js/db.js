@@ -128,6 +128,7 @@ function filterData(data) {
         },
         'day0': {
             'morn_temp': day0_mornTemp,
+            'max_temp': day0_max_temp,
             'aft_temp': day0_aftTemp,
             'eve_temp': day0_eveTemp,
             'weather': day0_weather,
@@ -136,6 +137,7 @@ function filterData(data) {
         },
         'day1': {
             'morn_temp': day1_mornTemp,
+            'max_temp': day1_max_temp,
             'aft_temp': day1_aftTemp,
             'eve_temp': day1_eveTemp,
             'weather': day1_weather,
@@ -145,6 +147,7 @@ function filterData(data) {
         'day2': {
             'morn_temp': day2_mornTemp,
             'aft_temp': day2_aftTemp,
+            'max_temp': day2_max_temp,
             'eve_temp': day2_eveTemp,
             'weather': day2_weather,
             'weather_icon': day2_weather_icon,
@@ -153,6 +156,7 @@ function filterData(data) {
         'day3': {
             'morn_temp': day3_mornTemp,
             'aft_temp': day3_aftTemp,
+            'max_temp': day3_max_temp,
             'eve_temp': day3_eveTemp,
             'weather': day3_weather,
             'weather_icon': day3_weather_icon,
@@ -162,6 +166,7 @@ function filterData(data) {
             'morn_temp': day4_mornTemp,
             'aft_temp': day4_aftTemp,
             'eve_temp': day4_eveTemp,
+            'max_temp': day4_max_temp,
             'weather': day4_weather,
             'weather_icon': day4_weather_icon,
             'weather_description': day4_weather_description
@@ -169,6 +174,7 @@ function filterData(data) {
         'day5': {
             'morn_temp': day5_mornTemp,
             'aft_temp': day5_aftTemp,
+            'max_temp': day5_max_temp,
             'eve_temp': day5_eveTemp,
             'weather': day5_weather,
             'weather_icon': day5_weather_icon,
@@ -178,6 +184,7 @@ function filterData(data) {
             'morn_temp': day6_mornTemp,
             'aft_temp': day6_aftTemp,
             'eve_temp': day6_eveTemp,
+            'max_temp': day6_max_temp,
             'weather': day6_weather,
             'weather_icon': day6_weather_icon,
             'weather_description': day6_weather_description
@@ -185,6 +192,7 @@ function filterData(data) {
         'day7': {
             'morn_temp': day7_mornTemp,
             'aft_temp': day7_aftTemp,
+            'max_temp': day7_max_temp,
             'eve_temp': day7_eveTemp,
             'weather': day7_weather,
             'weather_icon': day7_weather_icon,

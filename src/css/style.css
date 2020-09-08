@@ -5,6 +5,67 @@ body,html{
     padding: 0;
 }
 
+#spinner{
+    visibility: hidden; 
+    width: 20%;
+    height: 80px;
+  
+
+  transform: translate(-50%, -50%);
+    position: absolute;
+    top:50%;
+   
+    left:50%;
+
+
+
+  }
+
+  #spinner hr{
+      border: 0;
+      margin: 0;
+      width: 40%;
+      height: 40%;
+      position: absolute;
+      border-radius: 50%;
+      animation: spin 2s ease infinite;
+
+  }
+
+  #spinner ._1{
+      background: #ECD5FF;
+      animation-delay: -1.5s;
+  }
+  
+#spinner ._2{
+    background: #D5A1FE;
+    animation-delay: -1s;
+}
+
+#spinner ._3{
+    background: #57118C;
+    animation-delay: -0.5s;
+}
+
+#spinner ._4{
+    background: #9812FE;
+}
+
+
+
+
+
+  @keyframes spin {
+    0%, 100%{transform: translate(0);}
+    25%{transform: translate(160%);}
+    50%{transform: translate(160%, 160%)}
+    75%{transform: translate(0,160%)}
+
+}
+  
+  #spinner.show {
+    visibility: visible;
+  }
 
 body{
     background: radial-gradient(50% 50% at 50% 50%, #82118C 0%, rgba(93, 17, 140, 0.93) 100%);

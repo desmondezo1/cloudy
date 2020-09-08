@@ -7,6 +7,8 @@ export default class extends AbstractView {
         super(params);
 
         this.setTitle("Home");
+        this.removeTag("./src/css/results.css");
+        this.removeTag("./src/css/moredetails.css");
         // this.listen(this.removeTag("./src/css/style.css"));
 
         // this.createLink("./src/css/style.css");;
@@ -21,8 +23,8 @@ export default class extends AbstractView {
             <div class="err-msg" id="errorMsg"></div>
             <form id="myForm" name="myForn" >
                 <div class="search_input">
-                    <input type="search" name="search" results=5 placeholder=Search... id="searchField">
-
+                    <input type="search" name="search" results=5 placeholder="Search City..." id="searchField">
+                    
                     <button type="submit" class="search_btn">
                         <i class="fas fa-search"></i>
                     </button>

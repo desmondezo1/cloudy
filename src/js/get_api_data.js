@@ -3,12 +3,14 @@ export { getLongLat as api_data };
 import { filterData } from './db.js';
 import { storeData } from './db.js';
 import { navigateTo, router } from './routes.js';
-import showResults from './display-data.js';
+//import showResults from './display-data.js';
 import displayData_currentDay from './display-data.js';
 //import { router } from './routes.js;'
 //import { currentDay, day1, day2, day3, day4, day5, day6, day7 } from './display-data.js';
 
-
+function hideSpinner() {
+    spinner.className = spinner.className.replace("show", "");
+}
 
 //Function converts users location to a gets users location as string and returns a lon lat value
 
@@ -33,6 +35,7 @@ async function getLongLat(city) {
             }
         ).catch(
             err => {
+                console.log(err.message);
                 document.getElementById("errorMsg").innerHTML = `${err.message} <a onClick='document.getElementById("errorMsg").style.display ="none"'> x </a>`;
             }
         )
@@ -70,17 +73,20 @@ async function getWeatherData(lat, lon, apiKey, ...more) {
                 console.log('data stored!');
                 //showResults(data_returned, navigateTo("/results"));
                 router();
+
                 navigateTo("/results");
             }
         ).then(() => {
             console.log('end of chain');
             displayData_currentDay();
+            hideSpinner();
 
 
 
 
         })
         .catch(err => {
+            console.log(err.message);
             document.getElementById("errorMsg").innerHTML = `${err.message} <a onClick='document.getElementById("errorMsg").style.display ="none"'> x </a>`;
         })
 };
