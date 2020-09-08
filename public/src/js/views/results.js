@@ -55,7 +55,7 @@ export default class extends AbstractView {
 
         <section class="display-result" id="displayResults">
             <div class="card" id="day0">
-                <img class="weather-icon" id="weather_icon_day0" src=" http://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
+                <img class="weather-icon" id="weather_icon_day0" src=" https://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
                 <h1 id="weatherDescription_day0">Rainy</h1>
 
                 <p class="current-temp" ><span id="temp_day0">75</span><span>&#8451;</span></p>
@@ -77,7 +77,7 @@ export default class extends AbstractView {
             </div>
 
             <div class="card" id="day1">
-                <img class="weather-icon" id="weather_icon_day1" src=" http://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
+                <img class="weather-icon" id="weather_icon_day1" src=" https://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
                 <h1 id="weatherDescription_day1">Rainy</h1>
 
                 <p class="current-temp" ><span id="temp_day1">75</span><span>&#8451;</span></p>
@@ -100,7 +100,7 @@ export default class extends AbstractView {
 
 
             <div class="card" id="day2">
-            <img class="weather-icon" id="weather_icon_day2" src=" http://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
+            <img class="weather-icon" id="weather_icon_day2" src=" https://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
             <h1 id="weatherDescription_day2">Rainy</h1>
 
             <p class="current-temp" ><span id="temp_day2">75</span><span>&#8451;</span></p>
@@ -124,7 +124,7 @@ export default class extends AbstractView {
 
 
             <div class="card" id="day3">
-                <img class="weather-icon" id="weather_icon_day3" src=" http://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
+                <img class="weather-icon" id="weather_icon_day3" src=" https://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
                 <h1 id="weatherDescription_day3">Rainy</h1>
 
                 <p class="current-temp" ><span id="temp_day3">75</span><span>&#8451;</span></p>
@@ -147,7 +147,7 @@ export default class extends AbstractView {
 
 
             <div class="card" id="day4">
-                <img class="weather-icon" id="weather_icon_day4" src=" http://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
+                <img class="weather-icon" id="weather_icon_day4" src=" https://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
                 <h1 id="weatherDescription_day4">Rainy</h1>
 
                 <p class="current-temp" ><span id="temp_day4">75</span><span>&#8451;</span></p>
@@ -171,7 +171,7 @@ export default class extends AbstractView {
 
 
             <div class="card" id="day5">
-                <img class="weather-icon" id="weather_icon_day5" src=" http://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
+                <img class="weather-icon" id="weather_icon_day5" src=" https://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
                 <h1 id="weatherDescription_day5">Rainy</h1>
 
                 <p class="current-temp" ><span id="temp_day5">75</span><span>&#8451;</span></p>
@@ -193,7 +193,7 @@ export default class extends AbstractView {
             </div>
 
             <div class="card" id="day6">
-                <img class="weather-icon" id="weather_icon_day6" src=" http://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
+                <img class="weather-icon" id="weather_icon_day6" src=" https://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
                 <h1 id="weatherDescription_day6">Rainy</h1>
 
                 <p class="current-temp" ><span id="temp_day6">75</span><span>&#8451;</span></p>
@@ -215,7 +215,7 @@ export default class extends AbstractView {
             </div>
 
             <div class="card" id="day7">
-                <img class="weather-icon" id="weather_icon_day7" src=" http://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
+                <img class="weather-icon" id="weather_icon_day7" src=" https://openweathermap.org/img/wn/09d@2x.png" alt="" srcset="">
                 <h1 id="weatherDescription_day7">Rainy</h1>
 
                 <p class="current-temp" ><span id="temp_day7">75</span><span>&#8451;</span></p>

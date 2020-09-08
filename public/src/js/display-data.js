@@ -28,7 +28,7 @@ function showResults(data) {
 
     console.log(data.city);
     console.log(current_weather_icon);
-    let icon_url = `http://openweathermap.org/img/wn/${current_weather_icon}@2x.png`;
+    let icon_url = `https://openweathermap.org/img/wn/${current_weather_icon}@2x.png`;
     document.getElementById('city').innerHTML = ` ${data.city}`;
     document.getElementById("weather_icon").src = icon_url;
     document.getElementById('weatherDescription').innerHTML = current_weather_description;
@@ -49,7 +49,7 @@ function displayData_currentDay() {
     console.log(data.city);
     console.log(data.current.weather_icon);
     document.getElementById('city').innerHTML = data.city;
-    let icon_url = `http://openweathermap.org/img/wn/${data.current.weather_icon}@2x.png`;
+    let icon_url = `https://openweathermap.org/img/wn/${data.current.weather_icon}@2x.png`;
 
     document.getElementById("weather_icon_day0").src = icon_url;
     document.getElementById('weatherDescription_day0').innerHTML = data.current.weather_description;
@@ -61,7 +61,7 @@ function displayData_currentDay() {
 
     ///////////////////////////////////////////////////////////////////////////////
 
-    let icon_url_day1 = `http://openweathermap.org/img/wn/${data.day1.weather_icon}@2x.png`;
+    let icon_url_day1 = `https://openweathermap.org/img/wn/${data.day1.weather_icon}@2x.png`;
 
     document.getElementById("weather_icon_day1").src = icon_url_day1;
     document.getElementById('weatherDescription_day1').innerHTML = data.day1.weather_description;
@@ -76,7 +76,7 @@ function displayData_currentDay() {
     ///////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////
 
-    let icon_url_day2 = `http://openweathermap.org/img/wn/${data.day2.weather_icon}@2x.png`;
+    let icon_url_day2 = `https://openweathermap.org/img/wn/${data.day2.weather_icon}@2x.png`;
 
     document.getElementById("weather_icon_day2").src = icon_url_day2;
     document.getElementById('weatherDescription_day2').innerHTML = data.day2.weather_description;
@@ -89,7 +89,7 @@ function displayData_currentDay() {
     ///////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////
 
-    let icon_url_day3 = `http://openweathermap.org/img/wn/${data.day3.weather_icon}@2x.png`;
+    let icon_url_day3 = `https://openweathermap.org/img/wn/${data.day3.weather_icon}@2x.png`;
 
     document.getElementById("weather_icon_day3").src = icon_url_day3;
     document.getElementById('weatherDescription_day3').innerHTML = data.day3.weather_description;
@@ -101,7 +101,7 @@ function displayData_currentDay() {
 
     ///////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////
-    let icon_url_day4 = `http://openweathermap.org/img/wn/${data.day4.weather_icon}@2x.png`;
+    let icon_url_day4 = `https://openweathermap.org/img/wn/${data.day4.weather_icon}@2x.png`;
 
     document.getElementById("weather_icon_day4").src = icon_url_day4;
     document.getElementById('weatherDescription_day4').innerHTML = data.day4.weather_description;
@@ -113,7 +113,7 @@ function displayData_currentDay() {
 
     ///////////////////////////////////////////////////////////////////////////////
 
-    let icon_url_day5 = `http://openweathermap.org/img/wn/${data.day5.weather_icon}@2x.png`;
+    let icon_url_day5 = `https://openweathermap.org/img/wn/${data.day5.weather_icon}@2x.png`;
 
     document.getElementById("weather_icon_day5").src = icon_url_day5;
     document.getElementById('weatherDescription_day5').innerHTML = data.day5.weather_description;
@@ -125,7 +125,7 @@ function displayData_currentDay() {
 
     ///////////////////////////////////////////////////////////////////////////////
 
-    let icon_url_day6 = `http://openweathermap.org/img/wn/${data.day6.weather_icon}@2x.png`;
+    let icon_url_day6 = `https://openweathermap.org/img/wn/${data.day6.weather_icon}@2x.png`;
 
     document.getElementById("weather_icon_day6").src = icon_url_day6;
     document.getElementById('weatherDescription_day6').innerHTML = data.day6.weather_description;
@@ -136,7 +136,7 @@ function displayData_currentDay() {
     document.getElementById('eveTemp_day6').innerHTML = Math.round(data.day6.eve_temp);
 
     ///////////////////////////////////////////////////////////////////////////////
-    let icon_url_day7 = `http://openweathermap.org/img/wn/${data.day7.weather_icon}@2x.png`;
+    let icon_url_day7 = `https://openweathermap.org/img/wn/${data.day7.weather_icon}@2x.png`;
 
     document.getElementById("weather_icon_day7").src = icon_url_day7;
     document.getElementById('weatherDescription_day7').innerHTML = data.day7.weather_description;
